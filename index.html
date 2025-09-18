@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$CREATOR Chaos Crucible</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Blanka&display=swap" rel="stylesheet">  <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="background">
+    <div class="lightning"></div>
+    <div class="rune"></div>
+  </div>
+  <audio id="thunder" loop src="assets/thunder.mp3"></audio>
+  <audio id="sorcerer-bg" loop src="assets/sorcerer-bg.mp3"></audio>
+  <button id="mute-toggle" class="mute-btn">🔇 Mute</button>
+  <div class="loader" id="loader">
+    <img src="assets/loader.png" alt="Summoning Loader">
+  </div>
+  <div class="modal" id="intro-modal">
+    <div class="modal-content">
+      <img src="assets/sorcerer.png" alt="Solana Sorcerer" class="character">
+      <div class="slide" id="slide-1">
+        <h2>Welcome to the Chaos Crucible ⚡️</h2>
+        <p>I’m the Solana Sorcerer, guardian of $CREATOR. This is a realm where creators ignite chaos!</p>
+        <button onclick="showSlide(2)">Next</button>
+        <button onclick="closeModal()">Skip</button>
+      </div>
+      <div class="slide" id="slide-2" style="display: none;">
+        <h2>The $CREATOR Mission</h2>
+        <p>$CREATOR is about unleashing your wildest ideas on Solana. Art, memes, builds—Just Create ✨!</p>
+        <button onclick="showSlide(3)">Next</button>
+        <button onclick="closeModal()">Skip</button>
+      </div>
+      <div class="slide" id="slide-3" style="display: none;">
+        <h2>Ignite Your Destiny</h2>
+        <p>Mix elements in the Crucible to summon your $CREATOR sorcerer. Share it to join the revolution! 🔥</p>
+        <button onclick="closeModal()">Start Summoning!</button>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="main-content" style="display: none;">
+    <h1>$CREATOR Chaos Crucible ⚡️🔥</h1>
+    <p>Summon your personalized meme sorcerer in the electric abyss!</p>
+    <div class="cauldron">
+      <img src="assets/bubbling-Cauldron.gif" alt="Bubbling Cauldron" class="cauldron-img">
+      <form id="summon-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="e.g., Neo" required>
+        <label for="element">Choose Your Element:</label>
+        <select id="element" name="element">
+          <option value="Fire">Fire 🔥</option>
+          <option value="Chaos">Chaos 🌪️</option>
+          <option value="Solana">Solana ☀️</option>
+          <option value="Volt">Volt ⚡️</option>
+        </select>
+        <label for="manifesto">Your Wildest Creation Dream:</label>
+        <input type="text" id="manifesto" placeholder="e.g., Spark a Solana revolution!" required>
+        <button type="submit" id="summon">Summon Sorcerer!</button>
+      </form>
+    </div>
+    <div id="output" class="output"></div>
+    <a id="tweet" href="#" target="_blank" class="tweet-btn">Share on X ⚡️</a>
+    <footer>
+      <p>Powered by <a href="https://pump.fun/coin/4ZFHpmXteZs9cGao87L3qkJzRBxeziesgphhpLvLpump">$CREATOR</a> | Just Create ✨</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
